@@ -7,12 +7,12 @@ This repository contains my submissions for the easy and medium tasks for the "E
 ### Easy Task
 The easy task involved installing and demonstrating the usage of the current Jaya package for optimizing a simple optimization problem.
 
-- [Optimization of the Rosenbrock Function Using the Jaya Algorithm](easy_task/Rosenbrock_Optimization.pdf) - A comprehensive R Markdown document demonstrating the application of the Jaya algorithm to minimize the Rosenbrock function, a classic non-convex benchmark function in optimization.
+- [Optimization of the Rosenbrock Function Using the Jaya Algorithm](easy.pdf) - A comprehensive R Markdown document demonstrating the application of the Jaya algorithm to minimize the Rosenbrock function, a classic non-convex benchmark function in optimization.
 
 ### Medium Task
 The medium task required proposing a specific feature or algorithm improvement for inclusion in the package with a clear justification of its value.
 
-- [Proposal for Jaya R Package Enhancement: Constraint Visualization](medium_task/Constraint_Visualization_Proposal.pdf) - A detailed proposal for enhancing the Jaya package with constraint visualization capabilities for multi-objective optimization problems.
+- [Proposal for Jaya R Package Enhancement: Constraint Visualization](medium.pdf) - A detailed proposal for enhancing the Jaya package with constraint visualization capabilities for multi-objective optimization problems.
 
 ## Proposal Overview
 

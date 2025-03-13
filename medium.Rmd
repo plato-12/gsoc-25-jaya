@@ -1,0 +1,84 @@
+---
+title: 'Proposal for Jaya R Package Enhancement: Constraint Visualization'
+author: "Priyanshu Tiwari"
+date: "March 14, 2025"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: bootstrap
+    highlight: tango
+---
+
+# Proposal for Jaya R Package Enhancement: Constraint Visualization
+
+## Overview
+
+I propose enhancing the Jaya R package with new functionality for visualizing constraints in multi-objective optimization problems. After analyzing the current package implementation, I believe adding constraint visualization capabilities would significantly improve usability and provide valuable insights to users working with constrained optimization problems.
+
+## Background on the Jaya Package
+
+The current Jaya R package (version 1.0.3) implements the gradient-free, parameter-less Jaya optimization algorithm developed by Rao (2016). It supports both single and multi-objective optimization with features like:
+
+- Single-objective optimization via `jaya()`
+- Multi-objective optimization with Pareto front tracking via `jaya_multi()`
+- Constraint handling
+- Adaptive population sizing
+- Early stopping mechanisms
+
+While the package is already useful, I've identified an opportunity to enhance its functionality around constraints in multi-objective optimization.
+
+## Proposed Enhancement: Constraint Visualization
+
+I propose developing a constraint visualization module for the Jaya package to help users understand how constraints affect the solution space in multi-objective optimization. This enhancement would:
+
+1. Track constraint information throughout the optimization process
+2. Visualize feasible and infeasible regions in the objective space
+3. Show how constraints shape the Pareto front
+4. Enable sensitivity analysis by allowing users to visualize different constraint scenarios
+
+## Implementation Plan
+
+I plan to implement two main components:
+
+1. **Enhanced Multi-Objective Optimization Function (`jaya_multi_enhanced`)**:
+   - Extend the original `jaya_multi()` to track detailed constraint information
+   - Store constraint violations and feasibility status for all evaluated solutions
+   - Maintain backward compatibility with existing code
+
+2. **Constraint Visualization Function (`plot_jaya_constraints`)**:
+   - Create visualizations showing the Pareto front, feasible/infeasible solutions, and constraint boundaries
+   - Implement both static (ggplot2) and interactive (plotly) visualization options
+   - Allow users to focus on specific constraints or objectives
+
+## Benefits
+
+This enhancement will provide several key benefits:
+
+1. **Better understanding of optimization problems**: Users will gain insights into how constraints affect their solution space
+
+2. **Improved decision making**: Visualizing trade-offs between objectives under constraints will help users select appropriate solutions
+
+3. **Enhanced sensitivity analysis**: Users can visualize how modifying constraints changes the available solutions
+
+4. **Educational value**: Clear visualizations will help students and practitioners better understand multi-objective optimization concepts
+
+## Technical Implementation
+
+I'll implement this enhancement following R package development best practices:
+
+- Maintain compatibility with the existing package structure
+- Use ggplot2 for visualizations with optional plotly integration for interactivity
+- Implement comprehensive error handling and input validation
+- Create thorough documentation with examples
+- Develop comprehensive unit tests
+
+## Example Use Case
+
+To demonstrate the value of this enhancement, I've developed an example focusing on energy system optimization, showing how constraints on renewable energy integration affect the trade-offs between emissions reduction, cost, and system reliability.
+
+## Conclusion
+
+The proposed constraint visualization enhancement would add significant value to the Jaya R package by making constraints in multi-objective optimization more interpretable and their effects more visible. I believe this feature would benefit researchers, practitioners, and educators working with optimization problems.
